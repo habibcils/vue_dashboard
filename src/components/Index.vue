@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Navbar from '@/components/client/Navbar.vue'
+import Navbar from '@/components/admin/Navbar.vue'
 import Dialog from '@/components/client/Dialog.vue'
 
 export default {

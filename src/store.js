@@ -11,6 +11,7 @@ export default new vuex.Store({
     state: {
         stateLogin: 0,
         userData: [],
+        loading: false,
     },
     getters: {
         getUser : state => {
