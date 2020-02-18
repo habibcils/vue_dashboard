@@ -45,6 +45,7 @@ export default new vuex.Store({
                         setTimeout( ()=> {
                             router.push('/')
                         },500)
+                        // localStorage.setItem('token',token)
                     }).catch(err => {
                         console.log(err)
                         // return false;

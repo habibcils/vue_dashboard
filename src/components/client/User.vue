@@ -36,6 +36,9 @@ import Navbar from '@/components/client/Navbar.vue'
 import Dialog from '@/components/client/Dialog.vue'
 import { mapGetters } from "vuex"
 
+console.log(process.env.VUE_APP_URL)
+console.log(process.env.NODE_ENV)
+console.log(process.env.VUE_APP_APIURL)
     export default {
         components: {
         Navbar,

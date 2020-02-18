@@ -52,8 +52,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    // assetsPublicPath: '/',
-    assetsPublicPath: '/dev/vue-dashboard/',
+    assetsPublicPath: '/',
+    // assetsPublicPath: '/dev/vue-dashboard/',
 
 
     /**

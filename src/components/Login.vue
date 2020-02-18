@@ -101,7 +101,6 @@
 </template>
 
 <script>
-// process.env.VUE_APP_API
 import { mapMutations, mapActions } from "vuex";
     export default {
         name: 'Login',

@@ -14,7 +14,8 @@ import VuejsDialogMixin from 'vuejs-dialog/dist/vuejs-dialog-mixin.min.js'; // o
 
  // include the default style
 import 'vuejs-dialog/dist/vuejs-dialog.min.css';
-  
+
+
 const options = {
   // color: '#bffaf3',
   color: 'rgb(143, 255, 199)',

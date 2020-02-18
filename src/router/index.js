@@ -180,11 +180,11 @@ const router = new VueRouter({
 		},			 		   
 	],
 	mode: 'history',
-	base: '/dev/dashboard/'
+	// base: '/dev/dashboard/'
 })
 
 router.beforeEach((to, from, next) => {
-	console.log(' '+app)
+	// console.log(' '+app)
 	// app.loading = true	
 	// loading
 	next()

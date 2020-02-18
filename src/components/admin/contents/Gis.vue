@@ -6,8 +6,8 @@
                     <div class="page-header-title">
                         <i class="ik ik-users bg-blue"></i>
                         <div class="d-inline">
-                            <h5>Data Users</h5>
-                            <span>List all users on this application</span>
+                            <h5>GIS</h5>
+                            <span>Jakarta coordinate</span>
                         </div>
                     </div>
                 </div>
@@ -18,9 +18,9 @@
                                 <a href="/"><i class="ik ik-home"></i></a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="#">Configurations</a>
+                                <a href="#">GIS</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Data Users</li>
+                            <li class="breadcrumb-item active" aria-current="page">Jakarta coordinate</li>
                         </ol>
                     </nav>
                 </div>
@@ -36,7 +36,21 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-12">
-
+<GmapMap ref="mapRef"
+  :center="{lat:10, lng:10}"
+  :zoom="7"
+  map-type-id="terrain"
+  style="width: 500px; height: 300px"
+>
+  <GmapMarker
+    :key="index"
+    v-for="(m, index) in markers"
+    :position="m.position"
+    :clickable="true"
+    :draggable="true"
+    @click="center=m.position"
+  />
+</GmapMap>
                             </div>
                         </div>                                            
                     </div>
@@ -49,11 +63,25 @@
 
 <script>
 import Layout from '@/components/admin/Layout.vue'
+import * as VueGoogleMaps from 'vue2-google-maps'
+import Vue from 'vue'
+
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAgz3dX2HpGWQVG9-Zm03ULTlO8F7_SyHI',
+    }}
+);
 
 export default {
 	components:{
 		Layout
-	},
+    },
+    mounted(){
+        this.$refs.mapRef.$mapPromise.then((map) => {
+        map.panTo({lat: -6.200000, lng: 106.816666})
+    })
+    },
 	// name: "Index",
 	data() {
 		return {
